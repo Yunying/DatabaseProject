@@ -1,4 +1,4 @@
-package MainWindow;
+package Search;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
@@ -7,11 +7,13 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
 
 
 public class SearchButtonPanel extends JPanel implements ActionListener{
 
 	public SearchButtonPanel(){
+		setBorder(new EmptyBorder(50, 50, 50, 50));
 		JButton searchButton = new JButton("Search");
 		Dimension buttonDimension = new Dimension(100, 60);
 		searchButton.setPreferredSize(buttonDimension);
@@ -19,7 +21,7 @@ public class SearchButtonPanel extends JPanel implements ActionListener{
 		searchButton.setMinimumSize(buttonDimension);
 		
 		setLayout(new BorderLayout());
-		add(searchButton,BorderLayout.CENTER);
+		add(searchButton,BorderLayout.SOUTH);
 	}
 
 	@Override
