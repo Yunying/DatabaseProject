@@ -12,6 +12,7 @@ import java.awt.event.ActionListener;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
@@ -64,19 +65,19 @@ public class AddButtonPanel extends JPanel implements ActionListener{
 		person.setPreferredSize(buttonDimension);
 		person.setMaximumSize(buttonDimension);
 		person.setMinimumSize(buttonDimension);
-		invoice.addActionListener(this);
+		person.addActionListener(this);
 		
 		vendor = new JButton("Vendor");
 		vendor.setPreferredSize(buttonDimension);
 		vendor.setMaximumSize(buttonDimension);
 		vendor.setMinimumSize(buttonDimension);
-		invoice.addActionListener(this);
+		vendor.addActionListener(this);
 		
 		event = new JButton("Event");
 		event.setPreferredSize(buttonDimension);
 		event.setMaximumSize(buttonDimension);
 		event.setMinimumSize(buttonDimension);
-		invoice.addActionListener(this);
+		event.addActionListener(this);
 		
 		this.add(contract);
 		this.add(invoice);
@@ -86,8 +87,62 @@ public class AddButtonPanel extends JPanel implements ActionListener{
 	}
 
 	@Override
-	public void actionPerformed(ActionEvent arg0) {
+	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
+		if (e.getSource().equals(person)){
+			AddWindow panel = new AddWindow("person");
+			JOptionPane option = new JOptionPane();
+			int input = option.showConfirmDialog(null, panel, "Add Contact", JOptionPane.OK_CANCEL_OPTION);
+			if (input == JOptionPane.OK_OPTION) {
+			    System.out.println("Successfully Add A Contact");
+			} else {
+			    System.out.println("Canceled");
+			}
+		}
+		
+		else if (e.getSource().equals(contract)){
+			AddWindow panel = new AddWindow("contract");
+			JOptionPane option = new JOptionPane();
+			int input = option.showConfirmDialog(null, panel, "Add Contract", JOptionPane.OK_CANCEL_OPTION);
+			if (input == JOptionPane.OK_OPTION) {
+			    System.out.println("Successfully Add A Contract");
+			} else {
+			    System.out.println("Canceled");
+			}
+		}
+		
+		else if (e.getSource().equals(invoice)){
+			AddWindow panel = new AddWindow("invoice");
+			JOptionPane option = new JOptionPane();
+			int input = option.showConfirmDialog(null, panel, "Add Invoice", JOptionPane.OK_CANCEL_OPTION);
+			if (input == JOptionPane.OK_OPTION) {
+			    System.out.println("Successfully Add A Contact");
+			} else {
+			    System.out.println("Canceled");
+			}
+		}
+		
+		if (e.getSource().equals(vendor)){
+			AddWindow panel = new AddWindow("vendor");
+			JOptionPane option = new JOptionPane();
+			int input = option.showConfirmDialog(null, panel, "Vendor", JOptionPane.OK_CANCEL_OPTION);
+			if (input == JOptionPane.OK_OPTION) {
+			    System.out.println("Successfully Add A Contact");
+			} else {
+			    System.out.println("Canceled");
+			}
+		}
+		
+		if (e.getSource().equals(event)){
+			AddWindow panel = new AddWindow("event");
+			JOptionPane option = new JOptionPane();
+			int input = option.showConfirmDialog(null, panel, "Add Event", JOptionPane.OK_CANCEL_OPTION);
+			if (input == JOptionPane.OK_OPTION) {
+			    System.out.println("Successfully Add A Contact");
+			} else {
+			    System.out.println("Canceled");
+			}
+		}
 		
 	}
 	
