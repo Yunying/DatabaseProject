@@ -8,6 +8,8 @@ import java.awt.Dimension;
 
 
 
+
+
 import javax.imageio.ImageIO;
 import javax.mail.SendFailedException;
 import javax.swing.*;
@@ -15,6 +17,7 @@ import javax.swing.border.EmptyBorder;
 
 import Mail.Mail;
 import Search.SearchButtonPanel;
+import TextMessage.TextMessage;
 import Add.AddButtonPanel;
 
 import java.awt.*;
@@ -22,6 +25,7 @@ import java.awt.event.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -75,6 +79,14 @@ public class Main extends JFrame implements ActionListener {
 		mainView.setVisible(true);
 		mainView.setResizable(false);
 		mainView.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
+		try {
+			TextMessage tm = new TextMessage();
+		} catch (UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 }
