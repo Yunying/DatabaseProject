@@ -6,10 +6,14 @@ import java.awt.Dimension;
 
 
 
+
+
 import javax.imageio.ImageIO;
+import javax.mail.SendFailedException;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 
+import Mail.Mail;
 import Search.SearchButtonPanel;
 import Add.AddButtonPanel;
 
@@ -61,6 +65,7 @@ public class Main extends JFrame implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 
 	}
+	
 
 
 	public static void main(String[] args) {
@@ -70,5 +75,6 @@ public class Main extends JFrame implements ActionListener {
 		mainView.setVisible(true);
 		mainView.setResizable(false);
 		mainView.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
 	}
 }
