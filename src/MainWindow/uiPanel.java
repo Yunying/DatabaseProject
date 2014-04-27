@@ -17,12 +17,14 @@ import javax.swing.border.Border;
 import javax.swing.border.EmptyBorder;
 
 import Add.AddButtonPanel;
+import Alert.AlertPanel;
 import Search.SearchButtonPanel;
 
 public class uiPanel extends JPanel{
 	JTabbedPane pane = new JTabbedPane();
 	AddButtonPanel add = new AddButtonPanel();
 	SearchButtonPanel search = new SearchButtonPanel();
+	AlertPanel alert = new AlertPanel();
 	
 	public uiPanel(){
 		//Set size and layout
@@ -43,8 +45,10 @@ public class uiPanel extends JPanel{
 		add(picLabel, BorderLayout.NORTH);
 		
 		//Add Tabbed Pane
+		pane.add("    Alert    ", alert);
 		pane.add("        Add        ", add);
 		pane.add("    Search    ", search);
+		
 		add(pane, BorderLayout.CENTER);
 	}
 
