@@ -1,7 +1,10 @@
 Database Project
 ===============
 
-#Database Project； written in java; link MySQL database
+##Overview
+- Database Project； 
+- Written in java; 
+- link MySQL database
 
 ##Functions pursued
 1. Track current time
@@ -14,3 +17,9 @@ Database Project
 2. Use a drop-down list in "Add Person" when inputting his/her company
 3. Use "Choose" push button to let the user choose the vendor/client when inputting an invoice, contract or purchase order
 4. Can send text message or email to a contact via this program
+
+##Author
+- Yunying Tu
+- Computer Science & Business Administration
+- University of Southern California | Class of 2016
+- Email: yunyingt@usc.edu
