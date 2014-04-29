@@ -10,6 +10,7 @@ import java.awt.Dimension;
 
 
 
+
 import javax.imageio.ImageIO;
 import javax.mail.SendFailedException;
 import javax.swing.*;
@@ -79,14 +80,13 @@ public class Main extends JFrame implements ActionListener {
 		mainView.setVisible(true);
 		mainView.setResizable(false);
 		mainView.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		try {
-			TextMessage tm = new TextMessage();
-		} catch (UnsupportedEncodingException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		
+//		try {
+//			TextMessage msg = new TextMessage();
+//		} catch (Exception e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+
 	}
 }

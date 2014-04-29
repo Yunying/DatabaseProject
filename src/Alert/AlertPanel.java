@@ -51,24 +51,28 @@ public class AlertPanel extends JPanel implements ActionListener{
 		buttons.setPreferredSize(new Dimension(200,700));
 		buttons.setLayout(new GridLayout(5,1,10,40));
 		five_day = new JButton("5 days");
+		five_day.setFont(new Font("Times", Font.BOLD, 15));
 		five_day.setPreferredSize(buttonDimension);
 		five_day.setMaximumSize(buttonDimension);
 		five_day.setMinimumSize(buttonDimension);
 		five_day.addActionListener(this);
 		
 		ten_day = new JButton("10 days");
+		ten_day.setFont(new Font("Times", Font.BOLD, 15));
 		ten_day.setPreferredSize(buttonDimension);
 		ten_day.setMaximumSize(buttonDimension);
 		ten_day.setMinimumSize(buttonDimension);
 		ten_day.addActionListener(this);
 		
 		month = new JButton("1 month");
+		month.setFont(new Font("Times", Font.BOLD, 15));
 		month.setPreferredSize(buttonDimension);
 		month.setMaximumSize(buttonDimension);
 		month.setMinimumSize(buttonDimension);
 		month.addActionListener(this);
 		
 		two_month = new JButton("2 months");
+		two_month.setFont(new Font("Times", Font.BOLD, 15));
 		two_month.setPreferredSize(buttonDimension);
 		two_month.setMaximumSize(buttonDimension);
 		two_month.setMinimumSize(buttonDimension);
